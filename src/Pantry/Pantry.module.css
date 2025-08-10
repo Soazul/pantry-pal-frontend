@@ -1,0 +1,37 @@
+.searchbar {
+    border-radius: 10px;
+    border: 3px solid #A3B18A;
+    width: 100%;
+    outline: none;
+    padding: 5px;
+}
+
+.searchbar:focus {
+    border: 3px solid #588157;
+}
+
+.btn {
+    background-color: #A3B18A;
+    color: #FEFEFE;
+    border: 3px solid #A3B18A;
+    border-radius: 10px;
+    padding: 4px;
+    width: 90px;
+}
+
+.btn:hover {
+    background-color: #588157;
+    border: 3px solid #588157;
+}
+
+/* .inputField {
+    border: 3px solid #A3B18A;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+}
+
+.input-group input:focus {
+    outline: none;
+    box-shadow: none;
+} */

@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Provider } from "react-redux";
+import Login from './Login/Login';
+import store from './store';
+import { HashRouter, Route, Routes, Navigate } from 'react-router-dom';
+import Pantry from './Pantry/Pantry';
+import Cookbook from './Cookbook/Cookbook';
+import SmartRecipe from './SmartRecipe/SmartRecipe';
+import GroceryList from './GroceryList/GroceryList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <Provider store={store}>
+        <div>
+          <Routes>
+            <Route path="/" element={<Navigate to="/signin"/>}/>
+            <Route path="/signin" element={<Login/>}/>
+            <Route path="/pantry/*" element={<Pantry/>}/>
+            <Route path="/cookbook/*" element={<Cookbook/>}/>
+            <Route path="/smart_recipe/*" element={<SmartRecipe/>}/>
+            <Route path="/grocery_list/*" element={<GroceryList/>}/>
+          </Routes>
+        </div>
+      </Provider>
+     </HashRouter>
   );
 }
 

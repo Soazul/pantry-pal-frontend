@@ -1,0 +1,46 @@
+.page {
+    font-family: 'Inter', sans-serif;
+    background-color: #588157;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    width: 400px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.field {
+    border-radius: 10px;
+    border: 3px solid #A3B18A;
+    width: 225px;
+    outline: none;
+    padding: 5px;
+    margin-bottom: 7px;
+}
+
+.field:focus {
+    border: 3px solid #588157;
+}
+
+.btn {
+    background-color: #A3B18A;
+    color: #FEFEFE;
+    border: 3px solid #A3B18A;
+    border-radius: 10px;
+    padding: 4px;
+    width: 90px;
+}
+
+.btn:hover {
+    background-color: #588157;
+    border: 3px solid #588157;
+}
