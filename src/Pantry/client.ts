@@ -23,3 +23,12 @@ export const deletePantry = async (pantryItemId: number) => {
     return response.data;
 }
 
+export const getUnit = async () => {
+    const response = await axiosWithCredentials.get(`http://localhost:8080/api/units`);
+    return response.data;
+}
+
+export const getCategory = async () => {
+    const response = await axiosWithCredentials.get(`http://localhost:8080/api/aisles`);
+    return response.data;
+}

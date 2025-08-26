@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 type PantryItem = {
     id: number;
     name: string;
-    quantity: number;
+    quantity: string;
+    unit: string;
     expiration_date: string;
     category: string;
     location?: string;
@@ -29,7 +30,7 @@ const pantryItemSlice = createSlice({
                 name: pantryItem.name,
                 quantity: pantryItem.quantity,
                 unit: pantryItem.unit,
-                expirationDate: pantryItem.expirationDate,
+                expirationDate: pantryItem.expirationDate === "" ? null : pantryItem.expirationDate,
                 category: pantryItem.category,
                 location: pantryItem.location
             };

@@ -38,3 +38,7 @@
     box-shadow: none !important;
     border: none !important;
 }
+
+.page-link:focus {
+    box-shadow: none !important;
+}
